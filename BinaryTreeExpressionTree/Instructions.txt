@@ -1,0 +1,13 @@
+
+Binary Tree - Expression Tree
+by Jay Vince Serato
+Expression Trees are proper binary trees. Every internal node is an operation and will always have two children for its two operands. Every external node is an operand or a number.
+For this problem, you will tackle two parts:
+1. In the main.cpp, specifically in the opinput method, you are tasked to create a node and return it. The method takes in three (3) arguments: the tree which shall always be passed as parameter each time the method is called, the prompt which will be used for the prompt (which is provided in the instructions below), and lastly the parent that you can utilize to set as the newly-created node's parent. You will be creating a node in the following ways:
+	1. If the input (more specifically the first character at index 0) is an operator (+,-,*,/), create the node using the tree's create_node method and pass the input string and the parent as parameter. You can assign the node created to the node*n. Since an operator must absolutely have two children, recursively call the same opinput method for both its left and right children. The parameters of the recursive call are as below. You can also assign the node created to the node*left and right. Remember to set n's left and right child to left and right. Finally, return n.
+		1. The tree parameter will still be the same: tree
+		2. The prompt parameter that you will provide must be "left of " + input for the left child and "right of " + input for the right child. 3. The parent parameter is the newly created node n.
+	2. Otherwise, if it is not an operator, it must be an operand (a number). So simply create the node using the tree's create_node method and pass the input string and the parent as parameter and return it.
+2. In the node.h, implement the evaluate method which will return the answer of the node. You will return the following:
+	1. If the node is a number, return its int equivalent using the stoi method of the string library.
+	2. If the node is an operator, recursively call the evaluate method of its left and right child and do return the resulting operation [left] [op] [right].

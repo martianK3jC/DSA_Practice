@@ -1,0 +1,13 @@
+/*
+This is a conversion of a binary search tree to a min heap. In this proiblem, implement the algorithm to covert a binary search tree to a minheap. Theere are many ways of doung so however here you willd ot it the way expressed below;
+
+
+The algorith is done by the following steps:
+
+* create an array arr or size n, where n is the number of nodes in the given bst
+* Copy the node values of the tree in the arr[] in sorted order
+* While traversing the root during the depth first traversal, one by one copy the values from the arrys arr[] to the nodes of the BST
+
+
+
+*/
